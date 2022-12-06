@@ -5,24 +5,42 @@ import java.util.*;
 public class MoodAnalyser {
 
     String message;
-    public MoodAnalyser(){}
 
-    public MoodAnalyser(String message){
+    public MoodAnalyser() {
+    }
+
+    public MoodAnalyser(String message) {
         this.message = message;
     }
 
-    public String analyseMood(){
+    public String analyseMood() throws MoodAnalysisException, Exception {
         String[] split = message.split(" ", 0);
 
-        for (String x: split){
-            if (x.equals("Sad")){
+
+
+        for (String x : split) {
+            if (x.equals("Sad")) {
                 return "SAD";
             }
-            if (x.equals("Happy")){
+            if (x.equals("Happy")) {
                 return "HAPPY";
             }
         }
-        return "INVALID";
-     }
 
+        if(message.equals("NULL")){
+            throw new MoodAnalysisException();
+        }
+
+        else{
+            throw  new Exception();
+        }
+
+    }
+
+}
+
+class MoodAnalysisException extends Exception{
+    public String toString(){
+        return "MoodAnalysisException";
+    }
 }
