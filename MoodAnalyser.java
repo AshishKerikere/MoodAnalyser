@@ -4,14 +4,25 @@ import java.util.*;
 
 public class MoodAnalyser {
 
-    public String analyseMood(String message){
+    String message;
+    public MoodAnalyser(){}
+
+    public MoodAnalyser(String message){
+        this.message = message;
+    }
+
+    public String analyseMood(){
         String[] split = message.split(" ", 0);
+
         for (String x: split){
             if (x.equals("Sad")){
                 return "SAD";
             }
+            if (x.equals("Happy")){
+                return "HAPPY";
+            }
         }
-        return "HAPPY";
+        return "INVALID";
      }
 
 }
