@@ -1,19 +1,7 @@
 Test Case 1
 
-Connected to the target VM, address: '127.0.0.1:62616', transport: 'socket'
 Enter Message regarding Mood
-I am in Sad Mood
-SAD
-Disconnected from the target VM, address: '127.0.0.1:62616', transport: 'socket'
-
-Process finished with exit code 0
-
----------------------------------------------------------------------
-
-Test Case 2
-
-Enter Message regarding Mood
-I am in Any Mood
+NULL
 HAPPY
 
 Process finished with exit code 0
