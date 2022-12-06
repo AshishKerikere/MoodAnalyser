@@ -6,6 +6,12 @@ public class MainMethod {
         String message = scanner.nextLine();
 
         MoodAnalyser moodAnalyser = new MoodAnalyser(message);
-        System.out.println(moodAnalyser.analyseMood());
+        try{System.out.println(moodAnalyser.analyseMood());}
+        catch (MoodAnalysisException e){
+            System.out.println("Empty Mood");
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
     }
 }
