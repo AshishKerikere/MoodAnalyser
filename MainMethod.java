@@ -5,7 +5,10 @@ public class MainMethod {
         System.out.println("Enter Message regarding Mood");
         String message = scanner.nextLine();
 
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        System.out.println(moodAnalyser.analyseMood(message));
+        MoodAnalyser moodAnalyser = new MoodAnalyser("");
+        try{System.out.println(moodAnalyser.analyseMood());}
+        catch (Exception e){
+            System.out.println("HAPPY");
+        }
     }
 }
